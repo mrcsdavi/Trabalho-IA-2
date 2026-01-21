@@ -2,18 +2,14 @@ import math
 
 class Algoritmo:
 
-    @staticmethod
-    def dist(p, q):
+    def dist(p, q): # 
         return math.sqrt(sum((p[i] - q[i]) ** 2 for i in range(len(p))))
 
-    @staticmethod
     def vizinhanca_eps(D, idx, eps):
         return [
             i for i in range(len(D))
             if Algoritmo.dist(D[idx], D[i]) <= eps
         ]
-
-    @staticmethod
     def dbscan(D, eps, min_pts):
         visitado = set()
         cluster = {}           # índice -> id do cluster
@@ -40,7 +36,6 @@ class Algoritmo:
 
         return cluster, ruido, tipos
 
-    @staticmethod
     def expandir_cluster(D, idx, N, C, eps, min_pts,
                          visitado, cluster, ruido, tipos):
 

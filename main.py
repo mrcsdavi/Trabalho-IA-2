@@ -48,9 +48,7 @@ def main():
     print(f"Número de pontos considerados ruído: {ruido_iris}")
     print(f"Target names: {target_names}")
     
-    # Para visualizar, podemos usar apenas duas features (ex: sepal length e sepal width)
-    # ou usar técnicas de redução de dimensionalidade como PCA
-    plot_dbscan(X_iris[:, :2], tipos_iris, "DBSCAN - Iris (primeiras duas features)")
+    plot_dbscan(X_iris[:, :2], tipos_iris, "DBSCAN - Iris")
 
 if __name__ == "__main__":
     main()
